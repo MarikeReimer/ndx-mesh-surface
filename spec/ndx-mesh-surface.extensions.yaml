@@ -1,8 +1,27 @@
 groups:
-- neurodata_type_def: TetrodeSeries
-  neurodata_type_inc: ElectricalSeries
-  doc: An extension of ElectricalSeries to include the tetrode ID for each time series.
-  attributes:
-  - name: trode_id
-    dtype: int32
-    doc: The tetrode ID.
+- neurodata_type_def: MeshPlaneSegmentation
+  neurodata_type_inc: PlaneSegmentation
+  doc: A PlaneSegmentation that stores mesh data
+  groups:
+  - neurodata_type_def: MeshSurface
+    neurodata_type_inc: NWBDataInterface
+    doc: Vertices and faces which define a 3D mesh body
+    datasets:
+    - name: faces
+      dtype: uint
+      dims:
+      - face_number
+      - vertex_index
+      shape:
+      - null
+      - 3
+      doc: faces for surface, indexes vertices
+    - name: vertices
+      dtype: float
+      dims:
+      - vertex_number
+      - xyz
+      shape:
+      - null
+      - 3
+      doc: vertices for surface, points in 3D space

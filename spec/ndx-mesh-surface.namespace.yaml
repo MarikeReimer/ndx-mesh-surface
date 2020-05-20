@@ -8,6 +8,7 @@ namespaces:
   schema:
   - namespace: core
     neurodata_types:
-    - ElectricalSeries
+    - NWBDataInterface
+    - PlaneSegmentation
   - source: ndx-mesh-surface.extensions.yaml
   version: 0.1.0
