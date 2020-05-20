@@ -29,7 +29,7 @@ def main():
     # for more information
 
     #Mesh surface(Directly repurposed from CorticalSurfaces)
-    mesh_surface = NWBGroupSpec(doc='Vertices and faces which define a 3D mesh body',
+    mesh_surface = NWBGroupSpec(doc='Vertices and faces which define a 3D mesh surface',
                         datasets=[
                             NWBDatasetSpec(doc='faces for surface, indexes vertices', shape=(None, 3),
                                             name='faces', dtype='uint', dims=('face_number', 'vertex_index')),
@@ -40,7 +40,7 @@ def main():
 
 
     #Extend PlaneSegmentation to add a group for mesh_surface
-    mesh_plane_segmentation = NWBGroupSpec('A PlaneSegmentation that stores mesh data',
+    mesh_plane_segmentation = NWBGroupSpec('A PlaneSegmentation that stores mesh surface data',
                                 neurodata_type_inc='PlaneSegmentation',
                                 neurodata_type_def='MeshPlaneSegmentation',
                                 groups = [mesh_surface])

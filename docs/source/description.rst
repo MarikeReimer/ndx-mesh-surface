@@ -2,4 +2,4 @@ Overview
 ========
 
 .. note::
-    Add the description of your extension here
+    This extends the NWB PlaneSegmentation class by adding fields to store vertices and faces from 3D mesh data.
