@@ -1,0 +1,13 @@
+namespaces:
+- author:
+  - Marike Reimer
+  contact:
+  - marike.reimer@yale.edu
+  doc: Add group to PlaneSegmentation for faces and vertices of mesh
+  name: ndx-mesh-surface
+  schema:
+  - namespace: core
+    neurodata_types:
+    - ElectricalSeries
+  - source: ndx-mesh-surface.extensions.yaml
+  version: 0.1.0
